@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://athendrakomin-hub.github.io/ridou-10th-forum/sitemap.xml
