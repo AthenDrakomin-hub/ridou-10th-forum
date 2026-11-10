@@ -1,0 +1,18 @@
+name: IndexNow Auto Submit
+
+on:
+  schedule:
+    - cron: '0 2 * * *'      # 每天 UTC 02:00（北京时间 10:00）
+  workflow_dispatch:          # 支持手动触发
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs to IndexNow (Bing / Yandex / Seznam / Naver)
+        uses: bojieyang/indexnow-action@v3
+        with:
+          sitemap-location: 'https://athendrakomin-hub.github.io/ridou-10th-forum/sitemap.xml'
+          key: 'bd8702c4fa6391e5'
+          endpoint: 'www.bing.com'
+          since: 1
